@@ -1,0 +1,9 @@
+.footer {
+  margin: auto;
+  height: 62px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: goldenrod;
+}
