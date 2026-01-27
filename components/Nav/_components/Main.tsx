@@ -43,7 +43,7 @@ export default function Main() {
         >
           <span className="relative flex flex-row items-center justify-start gap-1">
             <Icon path={mdiTrophy} size={.8} />
-            <Link href="">Bajnokság</Link>
+            <Link href="/">Bajnokság</Link>
           </span>
         </li>
       </ul>
@@ -104,7 +104,7 @@ export default function Main() {
         >
           <span className="relative flex flex-row items-center justify-start gap-1">
             <Icon path={mdiLightbulbOn} size={.8} />
-            <Link href="">Tudástár</Link>
+            <Link href="/tudastar">Tudástár</Link>
           </span>
         </li>
       </ul>

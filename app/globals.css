@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+
 @theme {
   --animate-loading-spinner: loading-spinner 1s linear infinite;
 
@@ -48,3 +51,7 @@
   border-image-slice: 25;
   border-image-repeat: round;
 }
+
+/* @utility prose-wesnoth {
+  
+} */

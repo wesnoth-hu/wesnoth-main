@@ -10,3 +10,9 @@
 6. [Sequelize](https://www.sequelize.org/)
 7. [MariaDB](https://www.mariadb.org)
   
+## Installation Instructions:
+1. Install git-scm. node.js, npm.
+2. Clone with `git clone wesnoth-hu/wesnoth-main`
+3. Change branch with `git checkout feature/frontend`
+4. Run `npm install`
+5. Run `npm run dev` and open `http://localhost:3000`
