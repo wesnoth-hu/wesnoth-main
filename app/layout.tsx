@@ -8,6 +8,7 @@ import Image from "next/image";
 
 import "./globals.css";
 
+import Version from "@/components/Version/Version";
 import Menu from "@/components/Nav/Menu";
 import Footer from "@/components/Footer/Footer";
 
@@ -57,8 +58,9 @@ export default function RootLayout({
                       height={139}
                       priority
                       data-part="logo-image"
-                      className="mt-0 mb-0 mx-auto min-w-50 object-contain"
+                      className="absolute mt-0 mb-0 mx-auto min-w-50 object-contain"
                     />
+                    <Version />
                   </div>
                 </div>
                 <div data-part="menu" className="relative -top-12.5">
