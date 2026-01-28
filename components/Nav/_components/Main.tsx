@@ -32,7 +32,7 @@ export default function Main() {
     setOpenDropdownId(null);
   };
   return <>
-    <menu className="xsm:max-lg:hidden lg:max-2xl:flex lg:max-2xl:flex-row lg:max-2xl:items-start lg:max-2xl:justify-center lg:max-2xl:gap-4">
+    <menu className="z-100 xsm:max-lg:hidden lg:max-2xl:flex lg:max-2xl:flex-row lg:max-2xl:items-start lg:max-2xl:justify-center lg:max-2xl:gap-4">
       <ul
         data-part="Large Navigation Menu"
         className="my-2 flex flex-col items-center justify-start gap-2"

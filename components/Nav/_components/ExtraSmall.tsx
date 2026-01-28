@@ -44,7 +44,7 @@ export default function ExtraSmall() {
   };
 
   return <>
-    <menu className="xsm:max-sm:flex xsm:max-sm:flex-row xsm:max-sm:items-start xsm:max-sm:justify-center xsm:max-sm:gap-4 sm:max-md:hidden md:max-2xl:hidden">
+    <menu className="z-100 xsm:max-sm:flex xsm:max-sm:flex-row xsm:max-sm:items-start xsm:max-sm:justify-center xsm:max-sm:gap-4 sm:max-md:hidden md:max-2xl:hidden">
       <ul
         data-part="Large Navigation Menu"
         className="my-2 flex flex-col items-center justify-start gap-2"
