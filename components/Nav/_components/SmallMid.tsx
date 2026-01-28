@@ -44,7 +44,7 @@ export default function SmallMid() {
   };
 
   return <>
-    <menu className="sm:max-md:flex sm:max-md:flex-row sm:max-md:items-start sm:max-md:justify-center sm:max-md:gap-4 xsm:max-sm:hidden md:max-2xl:hidden">
+    <menu className="z-100 sm:max-md:flex sm:max-md:flex-row sm:max-md:items-start sm:max-md:justify-center sm:max-md:gap-4 xsm:max-sm:hidden md:max-2xl:hidden">
       <ul
         data-part="Large Navigation Menu"
         className="my-2 flex flex-col items-center justify-start gap-2"

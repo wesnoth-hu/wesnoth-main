@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import React from "react";
 
 import { ClerkProvider } from "@clerk/nextjs";
+import { huHU } from "@clerk/localizations";
 
 import localFont from "next/font/local";
 import Image from "next/image";
@@ -44,7 +45,7 @@ export default function RootLayout({
 }) {
   return (
     <React.StrictMode>
-      <ClerkProvider publishableKey={process.env.CLERK_PUBLISHABLE_KEY!}>
+      <ClerkProvider publishableKey={process.env.CLERK_PUBLISHABLE_KEY!} localization={huHU}>
         <html lang="en" className="xsm:max-2xl:w-auto h-max m-2.5 p-2.5">
           <body className={`${ebg.className} bg-[url('/hatter.jpg')] bg-fixed bg-contain bg-center bg-repeat`}>
             <main data-part="main" className=" min-w-75 w-full flex flex-col box-border

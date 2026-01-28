@@ -12,6 +12,7 @@
     "@casl/ability": "^6.7.5",
     "@casl/prisma": "^1.6.0",
     "@casl/react": "^5.0.0",
+    "@clerk/localizations": "^3.35.2",
     "@clerk/nextjs": "^6.36.5",
     "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",

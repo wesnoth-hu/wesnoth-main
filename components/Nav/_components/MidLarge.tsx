@@ -42,7 +42,7 @@ export default function MidLarge() {
     setOpenDropdown(null);
   };
   return <>
-    <menu className="md:max-lg:flex md:max-lg:flex-row md:max-lg:items-start md:max-lg:justify-center md:max-lg:gap-4 xsm:max-md:hidden lg:max-2xl:hidden">
+    <menu className="z-100 md:max-lg:flex md:max-lg:flex-row md:max-lg:items-start md:max-lg:justify-center md:max-lg:gap-4 xsm:max-md:hidden lg:max-2xl:hidden">
       <ul
         data-part="Large Navigation Menu"
         className="my-2 flex flex-col items-center justify-start gap-2"
