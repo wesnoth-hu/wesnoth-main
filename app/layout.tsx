@@ -11,6 +11,8 @@ import "./globals.css";
 import Version from "@/components/Version/Version";
 import Menu from "@/components/Nav/Menu";
 import Footer from "@/components/Footer/Footer";
+import CustomSignIn from "@/components/Auth/CustomSignIn";
+import CustomSignUp from "@/components/Auth/CustomSignUp";
 
 export const metadata: Metadata = {
   title: "Harc Wesnothért",
@@ -70,8 +72,9 @@ export default function RootLayout({
 
               <section>
                 <div className="flex flex-row justify-between bg-[url('/tart-hatter.jpg')] bg-size-[100%] min-h-130">
-                  <div className="my-2.5 mx-6.25 max-w-50 flex-1">
-                    
+                  <div className="my-2.5 mx-6.25 max-w-55 flex-1 flex flex-col items-center justify-start">
+                    <CustomSignIn />
+                    <CustomSignUp />
                   </div>
                   <div className="max-w-250 flex-1 border-image-slice-repeat flex flex-col items-center justify-center my-2.5 mx-6.25">
                     {children}
