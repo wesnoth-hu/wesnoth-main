@@ -1,0 +1,39 @@
+.version {
+	position: relative;
+	top: -55px;
+	right: -150px;
+	font-weight: bold;
+	font-size: 32px;
+	color: #d90f0f;
+}
+
+.version:hover {
+	color: #efbf04;
+}
+
+@media (max-width: 320px) {
+	.version {
+		position: relative;
+		top: -55px;
+		right: -100px;
+		font-size: 28px;
+	}
+}
+
+@media (max-width: 375px) {
+	.version {
+		position: relative;
+		top: -55px;
+		right: -110px;
+		font-size: 28px;
+	}
+}
+
+@media (max-width: 425) {
+	.version {
+		position: relative;
+		top: -55px;
+		right: -100px;
+		font-size: 28px;
+	}
+}

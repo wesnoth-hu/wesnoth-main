@@ -1,0 +1,99 @@
+@media all and (min-width: 1024px) and (max-width: 1440px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .navmenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .navitem {
+    font-size: 1.5rem;
+    line-height: 1.3333;
+    font-weight: bold;
+    color: #d4af37;
+    z-index: 100;
+  }
+
+  .navitem:hover {
+    color: #efbf04;
+  }
+
+  .navitem_span {
+    position: relative;
+    margin: 8px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flexstart;
+    gap: 4px;
+  }
+
+  .dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    color: #d4af37;
+    background-image: url('/tart-hatter.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    border: 25px solid transparent;
+    border-image: url("/tart-szel.jpg") 25 round;
+    background-color: #dad1a0;
+    z-index: 100;
+  }
+
+  .dropdownSimple {
+    right: -20px;
+  }
+
+  .dropdownGame {
+    top: 45px;
+    left: 130px;
+  }
+
+  .dropdownMedia {
+    top: 40px;
+    left: 400px;
+  }
+
+  .dropdownHidden {
+    display: none;
+  }
+
+  .dropdownItem {
+    margin: 8px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  .dropdownItem:hover {
+    color: #efbf04;
+  }
+}
+
+@media all and (max-width: 1023px) {
+	.menu {
+		display: none;
+	}
+}
+
+@media all and (min-width: 1441px) {
+	.menu {
+		display: none;
+	}
+}

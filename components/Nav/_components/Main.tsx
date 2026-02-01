@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import clsx from "clsx";
 import Icon from "@mdi/react";
 import {
   mdiTrophy,
@@ -20,6 +21,7 @@ import {
   mdiVideoHighDefinition,
 } from "@mdi/js";
 import Divider from "../Divider";
+import styles from "@/styles/mainMenu.module.css";
 
 export default function Main() {
   const [openDropdownId, setOpenDropdownId] = React.useState<'game' | 'media' | null>(null);
@@ -32,16 +34,16 @@ export default function Main() {
     setOpenDropdownId(null);
   };
   return <>
-    <menu className="z-100 xsm:max-lg:hidden lg:max-2xl:flex lg:max-2xl:flex-row lg:max-2xl:items-start lg:max-2xl:justify-center lg:max-2xl:gap-4">
+    <menu className={styles.menu}>
       <ul
         data-part="Large Navigation Menu"
-        className="my-2 flex flex-col items-center justify-start gap-2"
+        className={styles.navmenu}
       >
         <li
           data-part="Navigation Menu Item"
-          className="text-2xl font-bold text-[#d4af37] hover:text-[#efbf04]"
+          className={styles.navitem}
         >
-          <span className="relative flex flex-row items-center justify-start gap-1">
+          <span className={styles.navitem_span}>
             <Icon path={mdiTrophy} size={.8} />
             <Link href="/">Bajnokság</Link>
           </span>
@@ -51,34 +53,34 @@ export default function Main() {
 
       <ul
         data-part="Large Navigation Menu"
-        className="my-2 flex flex-col items-center justify-start gap-2"
+        className={styles.navmenu}
       >
         <li
           onMouseEnter={handleMouseEnter('game')}
           onMouseLeave={handleMouseLeave}
           data-part="Navigation Menu Item"
-          className="text-2xl font-bold text-[#d4af37] hover:text-[#efbf04]"
+          className={styles.navitem}
         >
-          <span className="relative flex flex-row items-center justify-start gap-1">
+          <span className={styles.navitem_span}>
             <Icon path={mdiController} size={.8} />
             <Link href="">A játék</Link>
           </span>
-          <div className={`${openDropdownId === 'game' ? "absolute flex flex-col content-center items-center justify-start text-[#d4af37] bg-[url('/tart-hatter.jpg')] bg-size-[100%_100%] border-image-slice-repeat" : "hidden"}`}>
-            <span className="flex flex-row items-center gap-2 hover:text-[#efbf04] cursor-pointer">
+          <div className={`${openDropdownId === 'game' ? clsx(styles.dropdown, styles.dropdownGame) : styles.dropdownHidden}`}>
+            <span className={styles.dropdownItem}>
               <Icon path={mdiDownload} size={.8} />
               A játék letöltése
             </span>
             <Divider />
-            <span className="flex flex-row items-center gap-2 hover:text-[#efbf04] cursor-pointer">
+            <span className={styles.dropdownItem}>
               <Icon path={mdiReplay} size={.8} />
               Visszajátszások
             </span>
             <Divider />
-            <span className="flex flex-row items-center gap-2 hover:text-[#efbf04] cursor-pointer">
+            <span className={styles.dropdownItem}>
               <Icon path={mdiMap} size={.8} />
               Pályák</span>
             <Divider />
-            <span className="flex flex-row items-center gap-2 hover:text-[#efbf04] cursor-pointer">
+            <span className={styles.dropdownItem}>
               <Icon path={mdiBookOpenVariant} size={.8} />
               Kézikönyv
             </span>
@@ -88,21 +90,21 @@ export default function Main() {
 
       <ul
         data-part="Large Navigation Menu"
-        className="my-2 flex flex-row items-center justify-start gap-2">
+        className={styles.navmenu}>
         <li
           data-part="Navigation Menu Item"
-          className="text-2xl font-bold text-[#d4af37] hover:text-[#efbf04]"
+          className={styles.navitem}
         >
-          <span className="relative flex flex-row items-center justify-start gap-1">
+          <span className={styles.navitem_span}>
             <Icon path={mdiPlusCircle} size={.8} />
             <Link href="">Kiegészítők</Link>
           </span>
         </li>
         <li
           data-part="Navigation Menu Item"
-          className="text-2xl font-bold text-[#d4af37] hover:text-[#efbf04]"
+          className={styles.navitem}
         >
-          <span className="relative flex flex-row items-center justify-start gap-1">
+          <span className={styles.navitem_span}>
             <Icon path={mdiLightbulbOn} size={.8} />
             <Link href="/tudastar">Tudástár</Link>
           </span>
@@ -111,35 +113,35 @@ export default function Main() {
 
       <ul
         data-part="Large Navigation Menu"
-        className="my-2 flex flex-col items-center justify-start gap-2"
+        className={styles.navmenu}
       >
         <li
           onMouseEnter={handleMouseEnter('media')}
           onMouseLeave={handleMouseLeave}
           data-part="Navigation Menu Item"
-          className="text-2xl font-bold text-[#d4af37] hover:text-[#efbf04]"
+          className={styles.navitem}
         >
-          <span className="relative flex flex-row items-center justify-start gap-1">
+          <span className={styles.navitem_span}>
             <Icon path={mdiMultimedia} size={.8} />
             <Link href="">Média</Link>
           </span>
-          <div className={`${openDropdownId === 'media' ? "absolute flex flex-col content-center items-center justify-start text-[#d4af37] bg-[url('/tart-hatter.jpg')] bg-size-[100%_100%] border-image-slice-repeat" : "hidden"}`}>
-            <span className="flex flex-row items-center gap-2 hover:text-[#efbf04] cursor-pointer">
+          <div className={`${openDropdownId === 'media' ? clsx(styles.dropdown, styles.dropdownMedia) : styles.dropdownHidden}`}>
+            <span className={styles.dropdownItem}>
               <Icon path={mdiMap} size={.8} />
               Hátterek
             </span>
             <Divider />
-            <span className="flex flex-row items-center gap-2 hover:text-[#efbf04] cursor-pointer">
+            <span className={styles.dropdownItem}>
               <Icon path={mdiBillboard} size={.8} />
               Plakát
             </span>
             <Divider />
-            <span className="flex flex-row items-center gap-2 hover:text-[#efbf04] cursor-pointer">
+            <span className={styles.dropdownItem}>
               <Icon path={mdiBellRing} size={.8} />
               Csengőhangok
             </span>
             <Divider />
-            <span className="flex flex-row items-center gap-2 hover:text-[#efbf04] cursor-pointer">
+            <span className={styles.dropdownItem}>
               <Icon path={mdiVideoHighDefinition} size={.8} />
               Videók
             </span>
@@ -149,22 +151,22 @@ export default function Main() {
 
       <ul
         data-part="Large Navigation Menu"
-        className="my-2 flex flex-row items-center justify-start gap-2"
+        className={styles.navmenu}
       >
         <li
           data-part="Navigation Menu Item"
-          className="text-2xl font-bold text-[#d4af37] hover:text-[#efbf04]"
+          className={styles.navitem}
         >
-          <span className="relative flex flex-row items-center justify-start gap-1">
+          <span className={styles.navitem_span}>
             <Icon path={mdiForum} size={.8} />
             <Link href="">Fórum</Link>
           </span>
         </li>
         <li
           data-part="Navigation Menu Item"
-          className="text-2xl font-bold text-[#d4af37] hover:text-[#efbf04]"
+          className={styles.navitem}
         >
-          <span className="relative flex flex-row items-center justify-start gap-1">
+          <span className={styles.navitem_span}>
             <Icon path={mdiChat} size={.8} />
             <Link href="">Discord</Link>
           </span>
