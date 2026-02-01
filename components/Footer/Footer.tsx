@@ -15,16 +15,16 @@ export default function Footer() {
           <Link href="https://react.dev" target="_blank">
             <Image
               src="logo-react.svg"
-              width={18}
-              height={18}
+              width={34}
+              height={34}
               alt="ReactJS Logo"
             />
           </Link>
           <Link href="https://nextjs.org" target="_blank">
-            <Image src="logo-next.svg" width={18} height={18} alt="NextJS Logo" />
+            <Image src="logo-next.svg" width={34} height={34} alt="NextJS Logo" />
           </Link>
           <Link href="https://pictogrammers.com" target="_blank">
-            <Image src="/picto.png" width={18} height={18} alt="PictoGrammers Icon" unoptimized />
+            <Image src="/picto.png" width={34} height={34} alt="PictoGrammers Icon" unoptimized />
           </Link>
         </div>
         {/*

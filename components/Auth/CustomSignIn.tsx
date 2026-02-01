@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useAuth, useClerk } from "@clerk/nextjs";
 import Icon from "@mdi/react";
 import { mdiLogin, mdiLogout } from "@mdi/js";
+import styles from "@/styles/customAuth.module.css";
 
 export default function CustomSignIn() {
   const { isSignedIn } = useAuth();
@@ -12,15 +13,15 @@ export default function CustomSignIn() {
   return (
     <>
       {isSignedIn ?
-        <span className="flex flex-row items-center gap-2 text-2xl font-bold text-[#d4af37] hover:text-[#efbf04]">
-          <Icon path={mdiLogout} size={.8} />
-          <button className="cursor-pointer" onClick={() => signOut({ redirectUrl: "/" })}>
+        <span className={styles.container}>
+          <Icon path={mdiLogout} size={1.2} />
+          <button className={styles.cursorPointer} onClick={() => signOut({ redirectUrl: "/" })}>
             Kilépés
           </button>
         </span>
         :
-        <span className="flex flex-row items-center gap-2 text-2xl font-bold text-[#d4af37] hover:text-[#efbf04]">
-          <Icon path={mdiLogin} size={.8} />
+        <span className={styles.container}>
+          <Icon path={mdiLogin} size={1.2} />
           <Link href="/sign-in">
             Belépés
           </Link>

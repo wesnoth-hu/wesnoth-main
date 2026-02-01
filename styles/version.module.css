@@ -37,3 +37,9 @@
 		font-size: 28px;
 	}
 }
+
+@media all and (min-width: 1660px) {
+	.version {
+		font-size: 50px;
+	}
+}

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import React from "react";
 
+import clsx from "clsx";
+
 import { ClerkProvider } from "@clerk/nextjs";
 import { huHU } from "@clerk/localizations";
 
@@ -26,6 +28,8 @@ export const metadata: Metadata = {
 
 const ebg = localFont({
   src: "./font/ebg.ttf",
+  weight: "700",
+  variable: '--ebg-font',
   display: "swap",
 });
 
@@ -39,8 +43,6 @@ const celtic = localFont({
   display: "swap",
 })
 
-// TODO: add classNames module 
-
 export default function RootLayout({
   children,
 }: {
@@ -53,7 +55,7 @@ export default function RootLayout({
           colorBackground: "#dad1a0",
         },
       }}>
-        <html lang="en" className={styles.html}>
+        <html lang="en" className={clsx(styles.html, ebg.variable)}>
           <body className={`${ebg.className}`}>
             <main data-part="main" className={styles.main}>
 

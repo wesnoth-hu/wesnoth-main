@@ -1,11 +1,11 @@
-@media all and (min-width: 1024px) and (max-width: 1439px) {
+@media all and (min-width: 1440px) and (max-width: 2560px) {
   .menu {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
     gap: 1rem;
-    font-size: 40px;
+    font-size: 48px;
   }
 
   .navmenu {
@@ -17,7 +17,7 @@
   }
 
   .navitem {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.3333;
     font-weight: bold;
     color: #d4af37;
@@ -60,13 +60,13 @@
   }
 
   .dropdownGame {
-    top: 45px;
+    top: 40px;
     left: 130px;
   }
 
   .dropdownMedia {
     top: 40px;
-    left: 400px;
+    right: 80px;
   }
 
   .dropdownHidden {
@@ -87,14 +87,14 @@
   }
 }
 
-@media all and (max-width: 1023px) {
-	.menu {
-		display: none;
-	}
+@media all and (max-width: 1439px) {
+  .menu {
+    display: none;
+  }
 }
 
-@media all and (min-width: 1440px) {
-	.menu {
-		display: none;
-	}
+@media all and (min-width: 2561px) {
+  .menu {
+    display: none;
+  }
 }
