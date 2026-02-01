@@ -8,6 +8,7 @@ import localFont from "next/font/local";
 import Image from "next/image";
 
 import "./globals.css";
+import styles from "@/styles/layout.module.css";
 
 import Version from "@/components/Version/Version";
 import Menu from "@/components/Nav/Menu";
@@ -38,6 +39,8 @@ const celtic = localFont({
   display: "swap",
 })
 
+// TODO: add classNames module 
+
 export default function RootLayout({
   children,
 }: {
@@ -45,15 +48,18 @@ export default function RootLayout({
 }) {
   return (
     <React.StrictMode>
-      <ClerkProvider publishableKey={process.env.CLERK_PUBLISHABLE_KEY!} localization={huHU}>
-        <html lang="en" className="xsm:max-2xl:w-auto h-max m-2.5 p-2.5">
-          <body className={`${ebg.className} bg-[url('/hatter.jpg')] bg-fixed bg-contain bg-center bg-repeat`}>
-            <main data-part="main" className=" min-w-75 w-full flex flex-col box-border
-          ">
+      <ClerkProvider publishableKey={process.env.CLERK_PUBLISHABLE_KEY!} localization={huHU} appearance={{
+        variables: {
+          colorBackground: "#dad1a0",
+        },
+      }}>
+        <html lang="en" className={styles.html}>
+          <body className={`${ebg.className}`}>
+            <main data-part="main" className={styles.main}>
 
-              <header className="my-0 mx-auto h-60 w-full">
-                <div data-part="fejlec" className="my-0 mx-auto h-60 w-full flex flex-col items-center justify-start bg-size-[100%_100%] bg-center bg-[url('/fejlec.jpg')]">
-                  <div data-part="logo" className="mt-5 mb-0 mx-auto w-full h-41.5 flex flex-col items-center justify-end">
+              <header className={styles.headerContainer}>
+                <div data-part="fejlec" className={styles.header}>
+                  <div data-part="logo" className={styles.logo}>
                     <Image
                       src="/logo-hu.png"
                       alt="Hungarian Wesnoth Logo"
@@ -61,30 +67,30 @@ export default function RootLayout({
                       height={139}
                       priority
                       data-part="logo-image"
-                      className="absolute mt-0 mb-0 mx-auto min-w-50 object-contain"
+                      className={styles.logoImg}
                     />
                     <Version />
                   </div>
                 </div>
-                <div data-part="menu" className="relative -top-12.5">
+                <div data-part="menu" className={styles.menuContainer}>
                   <Menu />
                 </div>
               </header>
 
               <section>
-                <div className="flex flex-row justify-between bg-[url('/tart-hatter.jpg')] bg-size-[100%] min-h-130">
-                  <div className="my-2.5 mx-6.25 max-w-55 flex-1 flex flex-col items-center justify-start">
+                <div className={styles.content}>
+                  <div className={styles.side}>
                     <CustomSignIn />
                     <CustomSignUp />
                   </div>
-                  <div className="max-w-250 flex-1 border-image-slice-repeat flex flex-col items-center justify-center my-2.5 mx-6.25">
+                  <div className={styles.children}>
                     {children}
                   </div>
                 </div>
               </section>
 
               <footer>
-                <div className="my-0 mx-auto w-full min-h-23 bg-size-[100%_100%] bg-center bg-[url('/lablec.jpg')]">
+                <div className={styles.footer}>
                   <Footer />
                 </div>
               </footer>

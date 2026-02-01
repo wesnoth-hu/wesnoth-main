@@ -1,0 +1,514 @@
+.html {
+  margin: 6px;
+  padding: 6px;
+  background-image: url('/hatter.jpg');
+  background-size: contain;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.main {
+  min-width: 300px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header {
+  margin: 0px auto;
+  height: 270px;
+  width: 100%;
+  background-image: url('/fejlec.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.logo {
+  margin-top: 10px auto 0px auto;
+  width: 100%;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.logoImg {
+  margin: 20px auto 10px auto;
+  min-width: 200px;
+  position: absolute;
+  top: 20px;
+  object-fit: contain;
+}
+
+.menuContainer {
+  position: absolute;
+  top: 237px;
+  z-index: 100;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  background-image: url("/tart-hatter.jpg");
+  background-size: 100%;
+  min-height: 500px;
+}
+
+.side {
+  margin: 10px 25px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.children {
+  margin: 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1050px;
+  min-height: 110vh;
+  border: 10px solid transparent;
+  border-image: url("/tart-szel.jpg") 25 round;
+  background-color: #dad1a0;
+}
+
+.footer {
+  margin: 0px auto;
+  background-image: url("/lablec.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  width: 100%;
+  height: 90px;
+}
+
+@media all and (max-width: 320px) {
+  .html {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .header {
+    background-image: url('/fejlec_320.jpg');
+    background-size: 100% 100%;
+  }
+
+  .logoImg {
+    width: 300px;
+  }
+
+  .menuContainer {
+    position: absolute;
+    top: 218px;
+    z-index: 100;
+  }
+
+  .content {
+    margin: 0;
+    background-image: url('/tart-hatter_320.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side {
+    margin: 0;
+    max-width: 320px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .children {
+    margin: 0px;
+    max-width: 300px;
+    min-height: 110vh;
+  }
+
+  .footer {
+    background-image: url('/lablec_320.jpg');
+    background-size: 100% 100%;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .html {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .header {
+    background-image: url('/fejlec_375.jpg');
+    background-size: 100% 100%;
+  }
+
+  .logoImg {
+    width: 300px;
+  }
+
+  .menuContainer {
+    position: absolute;
+    top: 218px;
+    z-index: 100;
+  }
+
+  .content {
+    margin: 0;
+    background-image: url('/tart-hatter_375.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side {
+    margin: 0;
+    max-width: 320px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .children {
+    margin: 3px;
+    max-width: 340px;
+    min-height: 110vh;
+  }
+
+  .footer {
+    background-image: url('/lablec_375.jpg');
+    background-size: 100% 100%;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .html {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .header {
+    background-image: url('/fejlec_375.jpg');
+    background-size: 100% 100%;
+  }
+
+  .logoImg {
+    width: 300px;
+  }
+
+  .menuContainer {
+    position: absolute;
+    top: 220px;
+    z-index: 100;
+  }
+
+  .content {
+    margin: 0;
+    background-image: url('/tart-hatter_375.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side {
+    margin: 0;
+    max-width: 320px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .children {
+    margin: 3px;
+    max-width: 390px;
+    min-height: 110vh;
+  }
+
+  .footer {
+    background-image: url('/lablec_375.jpg');
+    background-size: 100% 100%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .children {
+    max-width: 450px;
+    min-height: 110vh;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .children {
+    max-width: 550px;
+    min-height: 110vh;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .children {
+    max-width: 650px;
+    min-height: 110vh;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .html {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .header {
+    background-image: url('/fejlec_640.jpg');
+    background-size: 100% 100%;
+  }
+
+  .logoImg {
+    width: 340px;
+  }
+
+  .menuContainer {
+    position: absolute;
+    top: 225px;
+    z-index: 100;
+  }
+
+  .content {
+    margin: 0;
+    background-image: url('/tart-hatter_640.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side {
+    margin: 0;
+    max-width: 320px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .footer {
+    background-image: url('/lablec_640.jpg');
+    background-size: 100% 100%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .html {
+    margin: 5px;
+    padding: 0px;
+  }
+
+  .header {
+    background-image: url('/fejlec_768.jpg');
+    background-size: 100% 100%;
+  }
+
+  .logoImg {
+    width: 350px;
+  }
+
+  .menuContainer {
+    position: absolute;
+    top: 222px;
+    z-index: 100;
+  }
+
+  .content {
+    margin: 0;
+    background-image: url('/tart-hatter_768.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side {
+    margin: 0 auto;
+    max-width: 320px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .footer {
+    background-image: url('/lablec_768.jpg');
+    background-size: 100% 100%;
+  }
+} 
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .html {
+    margin: 7px;
+    padding: 0px;
+  }
+
+  .header {
+    background-image: url('/fejlec_768.jpg');
+    background-size: 100% 100%;
+  }
+
+  .logoImg {
+    width: 350px;
+  }
+
+  .menuContainer {
+    position: absolute;
+    top: 222px;
+    z-index: 100;
+  }
+
+  .content {
+    margin: 0;
+    background-image: url('/tart-hatter_768.jpg');
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .side {
+    margin: 0 auto;
+    width: 320px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .children {
+    max-width: 720px;
+    min-height: 110vh;
+  }
+
+  .footer {
+    background-image: url('/lablec_768.jpg');
+    background-size: 100% 100%;
+  }
+}
+
+@media all and (min-width: 1025px) and (max-width: 1280px) {
+  .html {
+    margin: 7px;
+    padding: 0px;
+  }
+
+  .header {
+    background-image: url('/fejlec_1280.jpg');
+    background-size: 100% 100%;
+  }
+
+  .logoImg {
+    width: 350px;
+  }
+
+  .menuContainer {
+    position: absolute;
+    top: 225px;
+    z-index: 100;
+  }
+
+  .content {
+    margin: 0;
+    background-image: url('/tart-hatter_1280.jpg');
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .side {
+    margin: 0 auto;
+    width: 320px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .children {
+    max-width: 800px;
+    min-height: 110vh;
+  }
+
+  .footer {
+    background-image: url('/lablec_1280.jpg');
+    background-size: 100% 100%;
+  }
+}
+
+@media all and (min-width: 1281px) and (max-width: 1440px) {
+  .html {
+    margin: 7px;
+    padding: 0px;
+  }
+
+  .header {
+    background-image: url('/fejlec_1280.jpg');
+    background-size: 100% 100%;
+  }
+
+  .logoImg {
+    width: 350px;
+  }
+
+  .menuContainer {
+    position: absolute;
+    top: 225px;
+    z-index: 100;
+  }
+
+  .content {
+    margin: 0;
+    background-image: url('/tart-hatter_1280.jpg');
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .side {
+    margin: 0 auto;
+    width: 320px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .children {
+    max-width: 720px;
+    min-height: 110vh;
+  }
+
+  .footer {
+    background-image: url('/lablec_1280.jpg');
+    background-size: 100% 100%;
+  }
+}

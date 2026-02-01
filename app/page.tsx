@@ -1,5 +1,13 @@
-import React from "react";
+"use client";
 
-export default async function Home() {
-  return <>Magyar Wesnoth</>;
+import React from "react";
+import styles from "@/styles/page.module.css";
+
+export default function Home() {
+  return (
+  <>  
+    <h1 className={styles.intro}>
+      Üdvözlet a Magyar Wesnoth Közösség portálján
+    </h1>
+  </>);
 }
