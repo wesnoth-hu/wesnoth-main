@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 
-@theme {
-  --breakpoint-*: initial;
+/*
   --breakpoint-xsm: 320px;
   --breakpoint-2xsm: 375px;
   --breakpoint-3xsm: 425px;
@@ -17,7 +16,7 @@
   --breakpoint-5xl: 1920px;
   --breakpoint-6xl: 2048px;
   --breakpoint-7xl: 2560px;
-}
+*/
 
 ::-webkit-scrollbar {
   width: 12px;
@@ -43,12 +42,4 @@
   overscroll-behavior: auto;
 }
 
-@utility border-image-slice-repeat {
-  border-width: 20px;
-  border-style: solid;
-  border-color: transparent;
-  background-color: #dad1a0;
-  border-image-source: url("/tart-szel.jpg");
-  border-image-slice: 25;
-  border-image-repeat: round;
-}
+

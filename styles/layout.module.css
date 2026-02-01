@@ -56,8 +56,6 @@
 }
 
 .content {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
   background-image: url("/tart-hatter.jpg");
   background-size: 100%;
   min-height: 500px;
@@ -65,19 +63,10 @@
 
 .side {
   margin: 10px 25px;
-  max-width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
 }
 
 .children {
   margin: 10px 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1050px;
   min-height: 110vh;
   border: 10px solid transparent;
   border-image: url("/tart-szel.jpg") 25 round;
@@ -93,6 +82,7 @@
   height: 90px;
 }
 
+/* MAX 320px */
 @media all and (max-width: 320px) {
   .html {
     margin: 0px;
@@ -116,26 +106,32 @@
 
   .content {
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    place-items: center;
     background-image: url('/tart-hatter_320.jpg');
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   .side {
     margin: 0;
-    max-width: 320px;
+    max-width: 270px;
+    height: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
+    justify-content: center;
+    gap: .5rem;
   }
 
   .children {
     margin: 0px;
-    max-width: 300px;
+    max-width: 270px;
     min-height: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer {
@@ -144,7 +140,9 @@
   }
 }
 
-@media all and (max-width: 375px) {
+
+/* MAX 375px */
+@media all and (min-width: 321px) and (max-width: 375px) {
   .html {
     margin: 0px;
     padding: 0px;
@@ -168,9 +166,10 @@
   .content {
     margin: 0;
     background-image: url('/tart-hatter_375.jpg');
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    place-items: center;
   }
 
   .side {
@@ -185,7 +184,7 @@
 
   .children {
     margin: 3px;
-    max-width: 340px;
+    max-width: 320px;
     min-height: 110vh;
   }
 
@@ -195,7 +194,9 @@
   }
 }
 
-@media all and (max-width: 425px) {
+
+/* MAX 425px */
+@media all and (min-width: 376px) and (max-width: 425px) {
   .html {
     margin: 0px;
     padding: 0px;
@@ -219,14 +220,15 @@
   .content {
     margin: 0;
     background-image: url('/tart-hatter_375.jpg');
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    place-items: center;
   }
 
   .side {
     margin: 0;
-    max-width: 320px;
+    max-width: 400px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -236,7 +238,7 @@
 
   .children {
     margin: 3px;
-    max-width: 390px;
+    max-width: 400px;
     min-height: 110vh;
   }
 
@@ -246,28 +248,63 @@
   }
 }
 
-@media all and (max-width: 500px) {
+
+/* MAX 500px */
+@media all and (min-width: 426px) and (max-width: 500px) {
+  .html {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .header {
+    background-image: url('/fejlec_375.jpg');
+    background-size: 100% 100%;
+  }
+
+  .logoImg {
+    width: 300px;
+  }
+
+  .menuContainer {
+    position: absolute;
+    top: 220px;
+    z-index: 100;
+  }
+
+  .content {
+    margin: 0;
+    background-image: url('/tart-hatter_375.jpg');
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    place-items: center;
+  }
+
+  .side {
+    margin: 0;
+    max-width: 450px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
   .children {
+    margin: 3px;
     max-width: 450px;
     min-height: 110vh;
   }
-}
 
-@media all and (max-width: 640px) {
-  .children {
-    max-width: 550px;
-    min-height: 110vh;
+  .footer {
+    background-image: url('/lablec_375.jpg');
+    background-size: 100% 100%;
   }
 }
 
-@media all and (max-width: 768px) {
-  .children {
-    max-width: 650px;
-    min-height: 110vh;
-  }
-}
 
-@media all and (max-width: 640px) {
+/* MAX 640px */
+@media all and (min-width: 501px) and (max-width: 640px)  {
   .html {
     margin: 0px;
     padding: 0px;
@@ -284,16 +321,17 @@
 
   .menuContainer {
     position: absolute;
-    top: 225px;
+    top: 218px;
     z-index: 100;
   }
 
   .content {
     margin: 0;
     background-image: url('/tart-hatter_640.jpg');
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    place-items: center;
   }
 
   .side {
@@ -306,13 +344,21 @@
     gap: 1rem;
   }
 
+  .children {
+    margin: 3px;
+    max-width: 450px;
+    min-height: 110vh;
+  }
+
   .footer {
     background-image: url('/lablec_640.jpg');
     background-size: 100% 100%;
   }
 }
 
-@media all and (max-width: 768px) {
+
+/* MAX 768px */
+@media all and (min-width: 641px) and (max-width: 768px) {
   .html {
     margin: 5px;
     padding: 0px;
@@ -336,19 +382,27 @@
   .content {
     margin: 0;
     background-image: url('/tart-hatter_768.jpg');
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    place-items: center;
   }
 
   .side {
-    margin: 0 auto;
-    max-width: 320px;
+    margin: 0;
+    max-width: 750px;
+    height: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
+  }
+
+  .children {
+    margin: 3px;
+    max-width: 750px;
+    min-height: 110vh;
   }
 
   .footer {
@@ -357,7 +411,9 @@
   }
 } 
 
-@media all and (min-width: 768px) and (max-width: 1024px) {
+
+/* MIN 768px MAX 1024px */
+@media all and (min-width: 769px) and (max-width: 1024px) {
   .html {
     margin: 7px;
     padding: 0px;
@@ -379,28 +435,29 @@
   }
 
   .content {
-    margin: 0;
     background-image: url('/tart-hatter_768.jpg');
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    place-items: center;
+  }
+
+  .side {
+    width: 850px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-  }
-
-  .side {
-    margin: 0 auto;
-    width: 320px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     gap: 1rem;
   }
 
   .children {
-    max-width: 720px;
+    width: 850px;
     min-height: 110vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer {
@@ -409,6 +466,9 @@
   }
 }
 
+
+
+/* MIN 1025px - MAX 1440px */
 @media all and (min-width: 1025px) and (max-width: 1280px) {
   .html {
     margin: 7px;
@@ -432,27 +492,30 @@
 
   .content {
     margin: 0;
+    min-height: 120vh;
     background-image: url('/tart-hatter_1280.jpg');
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: start center;
+    place-content: space-evenly;
   }
 
   .side {
-    margin: 0 auto;
-    width: 320px;
-    height: 100vh;
+    width: 200px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     gap: 1rem;
   }
 
   .children {
-    max-width: 800px;
-    min-height: 110vh;
+    width: 850px;
+    min-height: 115vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .footer {
@@ -462,6 +525,63 @@
 }
 
 @media all and (min-width: 1281px) and (max-width: 1440px) {
+.html {
+    margin: 7px;
+    padding: 0px;
+  }
+
+  .header {
+    background-image: url('/fejlec_1280.jpg');
+    background-size: 100% 100%;
+  }
+
+  .logoImg {
+    width: 350px;
+  }
+
+  .menuContainer {
+    position: absolute;
+    top: 225px;
+    z-index: 100;
+  }
+
+  .content {
+    margin: 0;
+    min-height: 120vh;
+    background-image: url('/tart-hatter_1280.jpg');
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: start center;
+    place-content: space-evenly;
+  }
+
+  .side {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .children {
+    width: 850px;
+    min-height: 115vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .footer {
+    background-image: url('/lablec_1280.jpg');
+    background-size: 100% 100%;
+  }
+}
+
+
+/* MIN 1281px - MAX 1440px */
+@media all and (min-width: 1441px) and (max-width: 1920px) {
   .html {
     margin: 7px;
     padding: 0px;
@@ -485,14 +605,66 @@
   .content {
     margin: 0;
     background-image: url('/tart-hatter_1280.jpg');
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    palce-items: start center;
+    place-content: space-evenly;
   }
 
   .side {
-    margin: 0 auto;
+    width: 320px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .children {
+    width: 1400px;
+    min-height: 110vh;
+  }
+
+  .footer {
+    background-image: url('/lablec_1280.jpg');
+    background-size: 100% 100%;
+  }
+}
+
+@media all and (min-width: 1921px) and (max-width: 2560px) {
+  .html {
+    margin: 7px;
+    padding: 0px;
+  }
+
+  .header {
+    background-image: url('/fejlec_1280.jpg');
+    background-size: 100% 100%;
+  }
+
+  .logoImg {
+    width: 350px;
+  }
+
+  .menuContainer {
+    position: absolute;
+    top: 220px;
+    z-index: 100;
+  }
+
+  .content {
+    margin: 0;
+    background-image: url('/tart-hatter_1280.jpg');
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: start center;
+    place-content: center;
+  }
+
+  .side {
     width: 320px;
     height: 100vh;
     display: flex;
@@ -503,7 +675,7 @@
   }
 
   .children {
-    max-width: 720px;
+    width: 1400px;
     min-height: 110vh;
   }
 
